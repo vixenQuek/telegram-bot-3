@@ -77,7 +77,7 @@ def main():
     client2.run_until_disconnected()
     client3.run_until_disconnected()
     client4.run_until_disconnected()
-    # client5.run_until_disconnected()
+    client5.run_until_disconnected()
 
 
 async def send_message():
@@ -93,16 +93,16 @@ async def send_message():
                 await client1.send_message(i,MESSAGE_TO_SENT1)
         for i in CHAT_LIST2:
             if MESSAGE_TO_SENT2 is not None:
-                await client1.send_message(i,MESSAGE_TO_SENT2)
+                await client2.send_message(i,MESSAGE_TO_SENT2)
         for i in CHAT_LIST3:
             if MESSAGE_TO_SENT3 is not None:
-                await client1.send_message(i,MESSAGE_TO_SENT3)
+                await client3.send_message(i,MESSAGE_TO_SENT3)
         for i in CHAT_LIST4:
             if MESSAGE_TO_SENT4 is not None:
-                await client1.send_message(i,MESSAGE_TO_SENT4)
+                await client4.send_message(i,MESSAGE_TO_SENT4)
         for i in CHAT_LIST5:
             if MESSAGE_TO_SENT5 is not None:
-                await client1.send_message(i,MESSAGE_TO_SENT5)
+                await client5.send_message(i,MESSAGE_TO_SENT5)
                 
 
 
@@ -250,7 +250,7 @@ async def set_game(event):
                 await client3.send_message('me', f'reply to an number')
 
 
-'''
+
 
 
 @client4.on(events.NewMessage(chats='me'))
@@ -343,7 +343,7 @@ async def set_game(event):
                 Timer = int(message)
                 await client5.send_message('me', f'Timer is set for every {Timer} seconds')
             else:
-                await client5.send_message('me', f'reply to an number')'''
+                await client5.send_message('me', f'reply to an number')
 
 
 
