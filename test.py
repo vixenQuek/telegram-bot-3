@@ -111,7 +111,7 @@ async def send_message():
 
 @client1.on(events.NewMessage(chats='me'))
 async def set_game(event):
-    global CHAT_LIST1, MESSAGE_TO_SENT1
+    global CHAT_LIST1, MESSAGE_TO_SENT1, Timer
     my_message = event.original_update.message.message # This will get every message from admin
     if my_message == '/setmessage': # Check if the message is '/setgame'
         get_message = event.original_update.message.reply_to # Will try to get the message which was replay 
@@ -158,7 +158,7 @@ async def set_game(event):
 
 @client2.on(events.NewMessage(chats='me'))
 async def set_game(event):
-    global CHAT_LIST2, MESSAGE_TO_SENT2
+    global CHAT_LIST2, MESSAGE_TO_SENT2, Timer
     my_message = event.original_update.message.message # This will get every message from admin
     if my_message == '/setmessage': # Check if the message is '/setgame'
         get_message = event.original_update.message.reply_to # Will try to get the message which was replay 
@@ -206,7 +206,7 @@ async def set_game(event):
 
 @client3.on(events.NewMessage(chats='me'))
 async def set_game(event):
-    global CHAT_LIST3, MESSAGE_TO_SENT3
+    global CHAT_LIST3, MESSAGE_TO_SENT3, Timer
     my_message = event.original_update.message.message # This will get every message from admin
     if my_message == '/setmessage': # Check if the message is '/setgame'
         get_message = event.original_update.message.reply_to # Will try to get the message which was replay 
@@ -255,7 +255,7 @@ async def set_game(event):
 
 @client4.on(events.NewMessage(chats='me'))
 async def set_game(event):
-    global CHAT_LIST4, MESSAGE_TO_SENT4
+    global CHAT_LIST4, MESSAGE_TO_SENT4, Timer
     my_message = event.original_update.message.message # This will get every message from admin
     if my_message == '/setmessage': # Check if the message is '/setgame'
         get_message = event.original_update.message.reply_to # Will try to get the message which was replay 
@@ -302,7 +302,7 @@ async def set_game(event):
 
 @client5.on(events.NewMessage(chats='me'))
 async def set_game(event):
-    global CHAT_LIST5, MESSAGE_TO_SENT5
+    global CHAT_LIST5, MESSAGE_TO_SENT5, Timer
     my_message = event.original_update.message.message # This will get every message from admin
     if my_message == '/setmessage': # Check if the message is '/setgame'
         get_message = event.original_update.message.reply_to # Will try to get the message which was replay 
