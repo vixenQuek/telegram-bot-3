@@ -46,7 +46,7 @@ api_hash5 = 'cc517c8e24cd8d1d0cee9c77794b3bc8'
 client1 = TelegramClient("+6593535606", api_id1, api_hash1)
 client2 = TelegramClient("+6590512432", api_id2, api_hash2)
 client3 = TelegramClient("+6596114901", api_id3, api_hash3)
-client4 = TelegramClient("+12404902773", api_id4, api_hash4)
+#client4 = TelegramClient("+12404902773", api_id4, api_hash4)
 #client5 = TelegramClient("+639155423753", api_id5, api_hash5)
 
 MESSAGE_TO_SENT1 = None
@@ -67,7 +67,7 @@ def main():
     client1.start()
     client2.start()
     client3.start()
-    client4.start()
+    #client4.start()
     #client5.start()
 
     print("Userbot on!")
@@ -76,7 +76,7 @@ def main():
     client1.run_until_disconnected()
     client2.run_until_disconnected()
     client3.run_until_disconnected()
-    client4.run_until_disconnected()
+    #client4.run_until_disconnected()
     #client5.run_until_disconnected()
 
 
@@ -97,9 +97,9 @@ async def send_message():
         for i in CHAT_LIST3:
             if MESSAGE_TO_SENT3 is not None:
                 await client3.send_message(i,MESSAGE_TO_SENT3)
-        for i in CHAT_LIST4:
-            if MESSAGE_TO_SENT4 is not None:
-                await client4.send_message(i,MESSAGE_TO_SENT4)
+        #for i in CHAT_LIST4:
+        #    if MESSAGE_TO_SENT4 is not None:
+        #        await client4.send_message(i,MESSAGE_TO_SENT4)
         #for i in CHAT_LIST5:
         #    if MESSAGE_TO_SENT5 is not None:
         #        await client5.send_message(i,MESSAGE_TO_SENT5)
@@ -252,7 +252,7 @@ async def set_game(event):
 
 
 
-
+'''
 @client4.on(events.NewMessage(chats='me'))
 async def set_game(event):
     global CHAT_LIST4, MESSAGE_TO_SENT4, Timer
@@ -299,7 +299,7 @@ async def set_game(event):
                 await client4.send_message('me', f'reply to an number')
 
 
-'''
+
 @client5.on(events.NewMessage(chats='me'))
 async def set_game(event):
     global CHAT_LIST5, MESSAGE_TO_SENT5, Timer
